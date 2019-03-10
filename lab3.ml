@@ -43,8 +43,8 @@ expression.
 ......................................................................*)
 
 let add_point_pair (p1 : point_pair) (p2 : point_pair) : point_pair =
-  let (x1, x2), (y1, y2) = p1, p2 in
-  (x1 + x2, y1 + y2) ;;
+  match p1, p2 with
+  | (x1, x2), (y1, y2) -> (x1 + x2, y1 + y2) ;;
 
 (* Analogously, we can define a point by using a record to package up
 the x and y coordinates. *)
